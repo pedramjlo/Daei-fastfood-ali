@@ -7,16 +7,18 @@ body, html
     padding: 0;
     font-family: Lalezar;
     background-color: #667C26;
+    height: auto;
 }
 
-
+span, p, a
+{
+    color: #F5F5DC;
+}
 header img
 {
     margin: 0;
     padding: 0;
 }
-
-
 img
 {
     width: 100%;
@@ -24,15 +26,14 @@ img
     height: 9em;
     margin: 0;
 }
-
 #navbar
 {
     background-color: #667C26;
     height: 3.8em;
     margin-top: -1.7em;
-    filter: drop-shadow(0 0 0.75rem crimson);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
 }
-
 #navbar ul
 {
     display: flex;
@@ -42,39 +43,306 @@ img
     padding: 0;
     height: 100%;
 }
-
 #navbar ul
 {
     padding: 0 0.8em;
 }
-
 #navbar ul li a
 {
-    color: white;
     text-decoration: none;
     font-size: 1em;
     padding-left: 0.5em;
     padding-right: 0.5em;
-
 }
-
 #navbar ul li a.active {
     background-color: #F5F5DC;
     color: #667C26;
     border-radius: 10px;
     padding: 0.7em;
     width: fit-content;
-
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.menu-container
+{
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+    padding: 1em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    
+}
+.text-container
+{
+    display: flex;
+    flex-direction: column;
+}
+.text-row
+{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 0.8em;
+    padding-left: 1em;
+    direction: rtl;
+    margin-bottom: 0.8em;
+}
+.title
+{
+    font-size: 1.5em;
+    text-align: right;
+    padding-top: 0.5em;
 
+}
+.price
+{
+    text-align: left;
+    padding-top: 1.3em;
+}
+footer
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    background-color: #EBE5D8; 
+    height: 40%;
+}
+.icon-container {
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+    padding: 0 0;
+    margin-bottom: -1em;
 
-
+}
+.icon-container a img {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    width: 5em;
+    height: 5em;
+}
+.footer-text {
+    margin-top: 1.5em;
+    padding: 1em;
+    text-align: center;
+    color: black;
+}
+@media screen and (min-width: 768px) {
+    header img
+{
+    margin: 0;
+    padding: 0;
+}
+img
+{
+    max-width: 100%;
+    object-fit: cover;
+    height: 15em;
+    margin: 0;
+}
+#navbar
+{
+    background-color: #667C26;
+    height: 3.8em;
+    margin-top: -1.7em;
+    filter: drop-shadow(0 0 0.75rem crimson);
+}
+#navbar ul
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    height: 100%;
+}
+#navbar ul
+{
+    padding: 0 0.8em;
+}
+#navbar ul li a
+{
+    text-decoration: none;
+    font-size: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
 #pizza-page
 {
     background-color: #667C26;
     margin: 0;
     height: auto;
 }
+.menu-container
+{
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+    padding: 1em;
+}
+.text-container
+{
+    display: flex;
+    flex-direction: column;
+}
+.text-row
+{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 6em;
+    padding-left: 6.4em;
+    direction: rtl;
+    margin-bottom: 0.5em;
+}
+.title
+{
+    font-size: 1.5em;
+    text-align: right;
+    padding-top: 0.5em;
+
+}
+.price
+{
+    text-align: left;
+    padding-top: 1.2em;
+}
+footer
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    background-color: #EBE5D8; 
+    height: 40%;
+}
+.icon-container {
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+    padding: 0 0;
+    margin-bottom: -1em;
+}
+.icon-container a img {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    width: 5em;
+    height: 5em;
+}
+.footer-text {
+    margin-top: 1.5em;
+    padding: 1em;
+    text-align: center;
+    color: black;
+}
+}  
+@media screen and (min-width: 1024px) {
+    header img
+{
+    margin: 0;
+    padding: 0;
+}
+img
+{
+    max-width: 100%;
+    object-fit: cover;
+    height: 15em;
+    margin: 0;
+}
+#navbar
+{
+    background-color: #667C26;
+    height: 3.8em;
+    margin-top: -1.7em;
+    filter: drop-shadow(0 0 0.75rem crimson);
+}
+#navbar ul
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    height: 100%;
+}
+#navbar ul
+{
+    padding: 0 0.8em;
+}
+#navbar ul li a
+{
+    text-decoration: none;
+    font-size: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.8em;
+
+}
+#pizza-page
+{
+    background-color: #667C26;
+    margin: 0;
+    height: auto;
+}
+.menu-container
+{
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+    padding: 1em;
+}
+.text-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.text-row
+{   display: flex;
+    justify-content: space-between;
+    padding-right: 6em;
+    padding-left: 6.4em;
+    direction: rtl;
+    margin-bottom: 0.8em;
+}
+.title{   
+    font-size: 1.5em;
+    text-align: right;
+    padding-top: 0.5em;
+    margin-bottom: 0.7em;
+}
+.price{
+    text-align: left;
+    padding-top: 1.2em;
+    margin-bottom: 2em;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    background-color: #EBE5D8; 
+    height: 40%;
+}
+.icon-container {
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+    padding: 0 0;
+    margin-bottom: -1em;
+}
+.icon-container a img {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    width: 5em;
+    height: 5em;
+}
+.footer-text {
+    margin-top: 1.5em;
+    padding: 1em;
+    text-align: center;
+    color: black;
+}
+}
+  

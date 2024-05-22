@@ -2,6 +2,7 @@ function loadPage(pageName, targetElement) {
     // Update the header image
     document.getElementById('header-image').src = `../images/${pageName}-header.webp`;
 
+    
     // Load the page content
     fetch(`${pageName}.html`)
         .then(response => response.text())
@@ -18,6 +19,7 @@ function loadPage(pageName, targetElement) {
         targetElement.classList.add('active');
     }
 }
+
 
 window.onload = function() {
     var links = document.querySelectorAll('#navbar ul li a');
