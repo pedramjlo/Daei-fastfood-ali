@@ -3,18 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#667C26">
+    <meta name="theme-color" content="#4A713B">
     <title>Daei Ali</title>
-    <link rel="stylesheet" href="../css/style.css">
+
+
+    <link rel="stylesheet" href="../css/style.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="../css/style.css"></noscript>
+
+    <link rel="preload" href="../images/icons/call-icon.svg" as="image">
+    <link rel="preload" href="../images/icons/insta-icon.svg" as="image">
+
+
+
+    <link rel="preload" href="../fonts/Lalezar-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
+
+
 </head>
 <body>
     
     <header>
 
-        <!-- <?php the_header_image_tag(); ?> -->
-        <img id="header-image" src="../images/burger.webp" alt="drinks-header">
+        <div id="header-image-wrapper">
+            <img id="header-image" src="../images/pizza-header.webp" alt="drinks-header">
+        </div>
+        
 
-        <!-- <?php wp_nav_menu(); ?> -->
+        <!-- <?php wp_nav_menu(); ?> -->z
         <nav id="navbar">
             <ul>
                 <li><a href="#" data-page="starter">پیش غذا</a></li>
@@ -28,23 +43,23 @@
     </header>
 
     <main id="content">
-        <!-- <?php the_content(); ?> -->
     </main>
 
     <footer>
 
+        
         <div class="icon-container">
             <a href="tel:+989135794244"><img src="../images/icons/call-icon.svg" alt="call-icon"></a>
             <a href="https://www.instagram.com/daei.ali_fastfood/"><img src="../images/icons/insta-icon.svg" alt="insta-icon"></a>
         </div>
 
-        <!-- <?php echo get_option('admin_email'); ?> -->
+
         <p class="footer-text">کرمان، شهرک باهنر، خیابان بهارستان کوچه ۸، رو به روی پارک نظام مهندسی</p>
 
-        <!-- <?php wp_footer(); ?> -->
     </footer>
 
-    <script src="../javascript/main.js"></script>
+    <script src="../javascript/main.js" defer></script>
+      
 
 </body>
 </html>

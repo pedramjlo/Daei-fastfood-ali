@@ -1,41 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
-
-
-body, html
+*
 {
     margin: 0;
     padding: 0;
-    font-family: Lalezar;
-    background-color: #667C26;
-    height: auto;
 }
 
-span, p, a
-{
+@font-face {
+    font-family: 'Lalezar';
+    src: url('../fonts/Lalezar-Regular.woff2') format('woff2'),
+         url('../fonts/Lalezar-Regular.woff2') format('woff');
+    font-display: swap;
+}
+
+
+body, html {
+    margin: auto;
+    padding: 0;
+    font-family: Lalezar, system-ui;
+    font-style: normal;
+    font-display: swap;
+    background-image: url("../images/design.webp");
+    background-size: 100%;
+}
+
+
+
+span, p, a {
     color: #F5F5DC;
 }
-header img
-{
-    margin: 0;
-    padding: 0;
-}
-img
-{
+
+#header-image-wrapper {
+    position: relative;
     width: 100%;
-    object-fit: cover;
-    height: 9em;
-    margin: 0;
+    padding-top: 33.81%; /* 252 / 721 * 100 = 34.81% */
 }
-#navbar
-{
-    background-color: #667C26;
+
+#header-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+#navbar {
+    background-color: #296B17;
     height: 3.8em;
-    margin-top: -1.7em;
+    /*margin-top: -0.5vw;*/
+    transform: translateY(-3em);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
 }
-#navbar ul
-{
+
+#navbar ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -43,20 +60,21 @@ img
     padding: 0;
     height: 100%;
 }
-#navbar ul
-{
-    padding: 0 0.8em;
+
+#navbar ul {
+    padding: 0 1em;
 }
-#navbar ul li a
-{
+
+#navbar ul li a {
     text-decoration: none;
     font-size: 1em;
     padding-left: 0.5em;
     padding-right: 0.5em;
 }
+
 #navbar ul li a.active {
     background-color: #F5F5DC;
-    color: #667C26;
+    color: #296B17;
     border-radius: 10px;
     padding: 0.7em;
     width: fit-content;
@@ -64,285 +82,164 @@ img
     justify-content: center;
     align-items: center;
 }
-.menu-container
-{
+
+
+
+.menu-container {
     display: flex;
     flex-direction: column;
     padding-top: 1em;
     padding: 1em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    
 }
-.text-container
-{
+
+.text-container {
     display: flex;
     flex-direction: column;
 }
-.text-row
-{
+
+.text-row {
     display: flex;
     justify-content: space-between;
-    padding-right: 0.8em;
-    padding-left: 1em;
+    padding-right: 5%;
+    padding-left: 5%;
+    transform: translateY(-3em);
     direction: rtl;
     margin-bottom: 0.8em;
 }
-.title
-{
+
+.title {
     font-size: 1.5em;
     text-align: right;
     padding-top: 0.5em;
-
 }
-.price
-{
+
+.price {
     text-align: left;
-    padding-top: 1.3em;
-}
-footer
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1em;
-    background-color: #EBE5D8; 
-    height: 40%;
-}
-.icon-container {
-    display: flex;
-    justify-content: center;
-    width: 100%; 
-    padding: 0 0;
-    margin-bottom: -1em;
-
-}
-.icon-container a img {
-    margin-left: 10vw;
-    margin-right: 10vw;
-    width: 5em;
-    height: 5em;
-}
-.footer-text {
-    margin-top: 1.5em;
-    padding: 1em;
-    text-align: center;
-    color: black;
-}
-@media screen and (min-width: 768px) {
-    header img
-{
-    margin: 0;
-    padding: 0;
-}
-img
-{
-    max-width: 100%;
-    object-fit: cover;
-    height: 15em;
-    margin: 0;
-}
-#navbar
-{
-    background-color: #667C26;
-    height: 3.8em;
-    margin-top: -1.7em;
-    filter: drop-shadow(0 0 0.75rem crimson);
-}
-#navbar ul
-{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    list-style-type: none;
-    padding: 0;
-    height: 100%;
-}
-#navbar ul
-{
-    padding: 0 0.8em;
-}
-#navbar ul li a
-{
-    text-decoration: none;
+    padding-top: 1.4em;
     font-size: 1em;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-}
-#pizza-page
-{
-    background-color: #667C26;
-    margin: 0;
-    height: auto;
-}
-.menu-container
-{
-    display: flex;
-    flex-direction: column;
-    padding-top: 1em;
-    padding: 1em;
-}
-.text-container
-{
-    display: flex;
-    flex-direction: column;
-}
-.text-row
-{
-    display: flex;
-    justify-content: space-between;
-    padding-right: 6em;
-    padding-left: 6.4em;
-    direction: rtl;
-    margin-bottom: 0.5em;
-}
-.title
-{
-    font-size: 1.5em;
-    text-align: right;
-    padding-top: 0.5em;
-
-}
-.price
-{
-    text-align: left;
-    padding-top: 1.2em;
-}
-footer
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1em;
-    background-color: #EBE5D8; 
-    height: 40%;
-}
-.icon-container {
-    display: flex;
-    justify-content: center;
-    width: 100%; 
-    padding: 0 0;
-    margin-bottom: -1em;
-}
-.icon-container a img {
-    margin-left: 10vw;
-    margin-right: 10vw;
-    width: 5em;
-    height: 5em;
-}
-.footer-text {
-    margin-top: 1.5em;
-    padding: 1em;
-    text-align: center;
-    color: black;
-}
-}  
-@media screen and (min-width: 1024px) {
-    header img
-{
-    margin: 0;
-    padding: 0;
-}
-img
-{
-    max-width: 100%;
-    object-fit: cover;
-    height: 15em;
-    margin: 0;
-}
-#navbar
-{
-    background-color: #667C26;
-    height: 3.8em;
-    margin-top: -1.7em;
-    filter: drop-shadow(0 0 0.75rem crimson);
-}
-#navbar ul
-{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    list-style-type: none;
-    padding: 0;
-    height: 100%;
-}
-#navbar ul
-{
-    padding: 0 0.8em;
-}
-#navbar ul li a
-{
-    text-decoration: none;
-    font-size: 1em;
-    padding-left: 0.5em;
-    padding-right: 0.8em;
-
-}
-#pizza-page
-{
-    background-color: #667C26;
-    margin: 0;
-    height: auto;
-}
-.menu-container
-{
-    display: flex;
-    flex-direction: column;
-    padding-top: 1em;
-    padding: 1em;
-}
-.text-container{
-    display: flex;
-    flex-direction: column;
 }
 
-.text-row
-{   display: flex;
-    justify-content: space-between;
-    padding-right: 6em;
-    padding-left: 6.4em;
-    direction: rtl;
-    margin-bottom: 0.8em;
-}
-.title{   
-    font-size: 1.5em;
-    text-align: right;
-    padding-top: 0.5em;
-    margin-bottom: 0.7em;
-}
-.price{
-    text-align: left;
-    padding-top: 1.2em;
-    margin-bottom: 2em;
-}
 footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1em;
-    background-color: #EBE5D8; 
-    height: 40%;
+    padding: 0.8em;
+    background-color: #fbfad3; 
+    overflow: hidden;
 }
+
 .icon-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%; 
-    padding: 0 0;
-    margin-bottom: -1em;
+    padding: 0;
+    margin-bottom: 0;
 }
+
 .icon-container a img {
-    margin-left: 10vw;
-    margin-right: 10vw;
-    width: 5em;
-    height: 5em;
+    margin-left: 1em;
+    margin-right: 1em;
+    width: 5em; /* Adjust as needed */
+    height: 5em; /* Adjust as needed */
+    aspect-ratio: 1 / 1;
+    font-display: swap;
 }
+
 .footer-text {
-    margin-top: 1.5em;
-    padding: 1em;
+    min-height: 2em;
     text-align: center;
-    color: black;
+    color: #0B210E;
+    margin-top: 1em;
 }
+
+@media screen and (min-width: 768px) {
+
+    #header-image-wrapper {
+        position: relative;
+        width: 100%;
+        height: 1%;
+        padding-top: 33.81%; /* 252 / 721 * 100 = 34.81% */
+    }
+
+    header img {
+        height: 15em;
+    }
+
+    #navbar {
+        height: 3.8em;
+        margin-top: -1.7em;
+        filter: drop-shadow(0 0 0.75rem crimson);
+    }
+
+    .menu-container {
+        padding-left: 8.5em;
+        padding-right: 7.5em;
+    }
+
+    .text-row {
+        padding-right: 6em;
+        padding-left: 6.4em;
+        margin-bottom: 0.5em;
+    }
+
+    footer {
+        padding: 1em;
+        background-color: #EBE5D8; 
+        min-height: 15em;
+    }
+
+    .footer-text {
+        margin-top: 1.5em;
+        padding: 1em;
+    }
 }
-  
+
+@media screen and (min-width: 992) {
+    #header-img-wrapper {
+        height: 5em;
+    }
+
+    #navbar {
+        height: 3.8em;
+        margin-top: -1.7em;
+        filter: drop-shadow(0 0 0.75rem crimson);
+    }
+
+    .menu-container {
+        padding-left: 8.5em;
+        padding-right: 7.5em;
+    }
+
+    .text-row {
+        padding-right: 8em;
+        padding-left: 8.4em;
+        margin-bottom: 0.5em;
+    }
+
+    .title {
+        font-size: 1.5em;
+        text-align: right;
+        padding-top: 0.5em;
+    }
+    
+    .price {
+        text-align: left;
+        padding-top: 1.4em;
+        font-size: 1em;
+    }
+
+    footer {
+        padding: 1em;
+        background-color: #EBE5D8; 
+        min-height: 15em;
+    }
+
+    .footer-text {
+        margin-top: 1.5em;
+        padding: 1em;
+    }
+
+}
