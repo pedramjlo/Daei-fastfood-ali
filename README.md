@@ -3,7 +3,7 @@
 https://daei-fastfood-ali.ir
 
 # Intro
-وبسایت منوی دیجیتال رستوران دایی علی کرمان، شهرک باهنر. اولین کار فرانت اند real world من. 
+وبسایت منوی دیجیتال رستوران دایی علی کرمان، شهرک باهنر. اولین کار فرانت اند real world من علاوه بر طراحی UI و Deployment. 
 
 # Description
 پروژه mobile responsive برای منوی دیجیتال و اسکن شده توسط QR code. وبسایت استاتیک single page application به دلیل اندازه و سایز وبسایت و نیاز اساسی به بالاترین حد performance. 
