@@ -12,6 +12,6 @@ https://daei-fastfood-ali.ir
 وبسایت از ساختار ساده SPA استفاده میکنه. یک index.html به عنوان شل برای صفحات HTML کامپوننت هستند که به صورت دینامیک به همراه عکس ها توسط جاوا اسکریپت لود میشن. 
 عکس های header به فرمت webp تبدیل شده و در سرور هاست cache میشن. 
 
-!Image 1 image1.jpg
-!Image 2 image2.jpg
+!Image 1 [image1.jpg](https://github.com/pedramjlo/Daei-fastfood-ali/blob/main/image1.jpg)
+!Image 2 [image2.jpg](https://github.com/pedramjlo/Daei-fastfood-ali/blob/main/image2.jpg)
 
