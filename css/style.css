@@ -168,10 +168,13 @@ footer {
         display: none;
     }
 
-    #navbar {transform: translateY(-5px);
-        position: relative;
+    #navbar {
+        transform: translateY(-5px);
+        position: sticky;
+        top: 0;
         height: 5em;
         min-width: 100%;
+        z-index: 9999;
     }
     .text-container {
         display: flex;
@@ -180,11 +183,22 @@ footer {
     .text-row {
         display: flex;
         justify-content: space-between;
-        padding-right: 5%;
-        padding-left: 5%;
+        padding-right: 15%;
+        padding-left: 15%;
         transform: translateY(-3em);
         direction: rtl;
         margin-bottom: 0.8em;
+    }
+    .title {
+        font-size: 1.5em;
+        text-align: right;
+        padding-top: 2em;
+    }
+    
+    .price {
+        text-align: left;
+        font-size: 1em;
+        padding-top: 3em;
     }
 
 }
@@ -198,20 +212,25 @@ footer {
         display: none;
     }
 
-    #navbar {transform: translateY(-5px);
-        position: relative;
-        height: 5em;
+
+    #navbar {
+        transform: translateY(-5px);
+        position: sticky;
+        top: 0;
+        min-height: 5em;
         min-width: 100%;
+        z-index: 9999;
     }
     .text-container {
         display: flex;
         flex-direction: column;
+        
     }
     .text-row {
         display: flex;
         justify-content: space-between;
-        padding-right: 5%;
-        padding-left: 5%;
+        padding-right: 15%;
+        padding-left: 15%;
         transform: translateY(-3em);
         direction: rtl;
         margin-bottom: 0.8em;
