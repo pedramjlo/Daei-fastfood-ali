@@ -1,16 +1,16 @@
-*
-{
+
+*{
     margin: 0;
     padding: 0;
 }
 
-@font-face {
-    font-family: 'Lalezar';
-    src: url('../fonts/Lalezar-Regular.woff2') format('woff2'),
-         url('../fonts/Lalezar-Regular.woff2') format('woff');
-    font-display: swap;
-}
 
+body
+{
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+}
 
 body, html {
     margin: auto;
@@ -18,8 +18,7 @@ body, html {
     font-family: Lalezar, system-ui;
     font-style: normal;
     font-display: swap;
-    background-image: url("../images/design.webp");
-    background-size: 100%;
+    background-color: #006233;
 }
 
 
@@ -44,12 +43,10 @@ span, p, a {
 
 
 #navbar {
-    background-color: #296B17;
+    background-color: #874338;
     height: 3.8em;
-    /*margin-top: -0.5vw;*/
-    transform: translateY(-3em);
+    transform: translateY(-1.5em);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
 }
 
 #navbar ul {
@@ -74,7 +71,7 @@ span, p, a {
 
 #navbar ul li a.active {
     background-color: #F5F5DC;
-    color: #296B17;
+    color: #874338;
     border-radius: 10px;
     padding: 0.7em;
     width: fit-content;
@@ -83,12 +80,16 @@ span, p, a {
     align-items: center;
 }
 
+main {
+    flex: 1 0 auto;
+}
 
 
 .menu-container {
     display: flex;
     flex-direction: column;
-    padding-top: 1em;
+    margin-bottom: -1em;
+    transform: translateY(1.4em);
     padding: 1em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -127,7 +128,7 @@ footer {
     justify-content: center;
     padding: 0.8em;
     background-color: #fbfad3; 
-    overflow: hidden;
+    margin: 0;
 }
 
 .icon-container {
@@ -139,20 +140,26 @@ footer {
     margin-bottom: 0;
 }
 
+.icon-container a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .icon-container a img {
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
     width: 5em; /* Adjust as needed */
     height: 5em; /* Adjust as needed */
     aspect-ratio: 1 / 1;
-    font-display: swap;
+
 }
 
 .footer-text {
+    flex-shrink: 0;
     min-height: 2em;
     text-align: center;
     color: #0B210E;
     margin-top: 1em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 @media screen and (min-width: 768px) {
@@ -171,7 +178,7 @@ footer {
     #navbar {
         height: 3.8em;
         margin-top: -1.7em;
-        filter: drop-shadow(0 0 0.75rem crimson);
+        
     }
 
     .menu-container {
@@ -197,15 +204,22 @@ footer {
     }
 }
 
+
+
+.no-scroll {
+    overflow: hidden;
+    height: 100%;
+}
+
 @media screen and (min-width: 992) {
     #header-img-wrapper {
-        height: 5em;
+        display: none;
     }
 
     #navbar {
         height: 3.8em;
         margin-top: -1.7em;
-        filter: drop-shadow(0 0 0.75rem crimson);
+    
     }
 
     .menu-container {
@@ -214,8 +228,8 @@ footer {
     }
 
     .text-row {
-        padding-right: 8em;
-        padding-left: 8.4em;
+        padding-right: 50%;
+        padding-left: 50%;
         margin-bottom: 0.5em;
     }
 

@@ -17,6 +17,11 @@ function loadPage(pageName, targetElement) {
     }
 }
 
+
+// this function determines which website should be on display once the user successfully gets redirected to the daei-fastfood-ali.ir
+// in a single page application usually, the javascript file dynamically loads up the html components of the entire application at one go 
+
+
 window.onload = function() {
     // Preload Google Font
     var link = document.createElement('link');
