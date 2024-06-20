@@ -163,7 +163,30 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
-    
+
+    #header-image-wrapper {
+        display: none;
+    }
+
+    #navbar {transform: translateY(-5px);
+        position: relative;
+        height: 5em;
+        min-width: 100%;
+    }
+    .text-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .text-row {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 5%;
+        padding-left: 5%;
+        transform: translateY(-3em);
+        direction: rtl;
+        margin-bottom: 0.8em;
+    }
+
 }
 
 
@@ -171,6 +194,27 @@ footer {
 
 
 @media screen and (min-width: 1024) {
-    
+    #header-image-wrapper {
+        display: none;
+    }
+
+    #navbar {transform: translateY(-5px);
+        position: relative;
+        height: 5em;
+        min-width: 100%;
+    }
+    .text-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .text-row {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 5%;
+        padding-left: 5%;
+        transform: translateY(-3em);
+        direction: rtl;
+        margin-bottom: 0.8em;
+    }
 
 }
