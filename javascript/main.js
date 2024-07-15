@@ -1,26 +1,27 @@
+// script.js
+
 function loadPage(pageName, targetElement) {
     // Update the header image
-    document.getElementById('header-image').src = `../images/${pageName}-header.webp`;
+    document.getElementById('header-image').src = `DaeiAli-fastfood/images/${pageName}-header.webp`;
+
     // Load the page content
-    fetch(`${pageName}.html`)
+    fetch(`DaeiAli-fastfood/html/${pageName}.html`)
         .then(response => response.text())
         .then(data => {
             document.getElementById('content').innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Error loading page:', error);
+            document.getElementById('content').innerHTML = '<p>Failed to load content.</p>';
         });
-        
+
+    // Update active class in navbar links
     var links = document.querySelectorAll('#navbar ul li a');
-    for (var i = 0; i < links.length; i++) {
-        links[i].classList.remove('active');
-    }
+    links.forEach(link => link.classList.remove('active'));
     if (targetElement) {
         targetElement.classList.add('active');
     }
 }
-
-
-// this function determines which website should be on display once the user successfully gets redirected to the daei-fastfood-ali.ir
-// in a single page application usually, the javascript file dynamically loads up the html components of the entire application at one go 
-
 
 window.onload = function() {
     // Preload Google Font
@@ -29,15 +30,17 @@ window.onload = function() {
     link.href = 'https://fonts.googleapis.com/css2?family=Lalezar&display=swap';
     document.head.appendChild(link);
 
+    // Event listeners for navbar links
     var links = document.querySelectorAll('#navbar ul li a');
-    for (var i = 0; i < links.length; i++) {
-        links[i].addEventListener('click', function(event) {
+    links.forEach(link => {
+        link.addEventListener('click', function(event) {
             var pageName = this.getAttribute('data-page');
             loadPage(pageName, this);
             event.preventDefault();
         });
-    }
+    });
+
+    // Load default page on initial load
     var pizzaLink = document.querySelector('#navbar ul li a[data-page="pizza"]');
     loadPage('pizza', pizzaLink);
-}
-
+};

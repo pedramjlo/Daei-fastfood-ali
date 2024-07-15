@@ -30,7 +30,7 @@ span, p, a {
 #header-image-wrapper {
     position: relative;
     width: 100%;
-    padding-top: 33.81%; /* 252 / 721 * 100 = 34.81% */
+    padding-top: 33.81%; 
 }
 
 #header-image {
@@ -147,10 +147,9 @@ footer {
 .icon-container a img {
     margin-left: 0.5em;
     margin-right: 0.5em;
-    width: 5em; /* Adjust as needed */
-    height: 5em; /* Adjust as needed */
+    min-width: 7vh; 
+    min-height: 7vh; 
     aspect-ratio: 1 / 1;
-
 }
 
 .footer-text {
